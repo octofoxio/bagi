@@ -1,0 +1,10 @@
+<PaymentRequest>
+  <merchantID>${MERCHANT_ID}</merchantID>
+  <uniqueTransactionCode>${uniqueTransactionCode}</uniqueTransactionCode>
+  <desc>${desc}</desc>
+  <amt>${amt}</amt>
+  <currencyCode>${currencyCode}</currencyCode>
+  <panCountry>${COUNTRY}</panCountry>
+  <cardholderName>${cardholderName}</cardholderName>
+  <encCardData>${encryptedCardInfo}</encCardData>
+</PaymentRequest>

@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://demo2.2c2p.com/2C2PFrontEnd/SecurePayment/api/my2c2p.1.6.9.min.js"></script>
+  </head>
+  <body>
+    <form id="fake">
+      <input type="text" data-encrypt="cardnumber" maxlength="16" placeholder="Credit Card Number" value="4111111111111111" /><br />
+      <input type="text" data-encrypt="month" maxlength="2" placeholder="MM" value="02" /><br />
+      <input type="text" data-encrypt="year" maxlength="4" placeholder="YYYY" value="2090" /><br />
+      <input type="password" data-encrypt="cvv" maxlength="4" autocomplete="off" placeholder="CVV2/CVC2" value="123" />
+    </form>
+    <div id="result" />
+  </body>
+</html>

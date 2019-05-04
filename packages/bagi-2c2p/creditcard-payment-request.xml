@@ -1,0 +1,14 @@
+<PaymentRequest>
+  <version>${version}</version>
+  <merchantID>${MERCHANT_ID}</merchantID>
+  <uniqueTransactionCode>${uniqueTransactionCode}</uniqueTransactionCode>
+  <desc>${desc}</desc>
+  <amt>${amt}</amt>
+  <currencyCode>${currencyCode}</currencyCode>
+  <panCountry>${COUNTRY}</panCountry>
+  <cardholderName>${cardholderName}</cardholderName>
+  <cardholderEmail>${cardholderEmail}</cardholderEmail>
+  <encCardData>${encryptedCardInfo}</encCardData>
+  <userDefined1>${redirect}</userDefined1>
+  <secureHash>${hash}</secureHash>
+</PaymentRequest>

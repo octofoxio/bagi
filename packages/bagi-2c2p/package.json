@@ -1,0 +1,28 @@
+{
+  "name": "@bagi/2c2p",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "clean": "find -E . -regex '.*\\.(js|map|d\\.ts)' -not -path \"**/node_modules/*\" -not -path  \"./.next/*\" -delete"
+  },
+  "devDependencies": {
+    "@types/form-data": "^2.2.1",
+    "@types/jest": "^24.0.12",
+    "@types/node-fetch": "^2.3.3",
+    "@types/node-forge": "^0.8.2",
+    "@types/puppeteer": "^1.12.4",
+    "jest": "^24.7.1",
+    "puppeteer": "^1.15.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "form-data": "^2.3.3",
+    "jest-puppeteer": "^4.1.1",
+    "node-fetch": "^2.5.0",
+    "node-forge": "^0.8.2"
+  }
+}
