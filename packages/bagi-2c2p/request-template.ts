@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs'
 import { join } from 'path'
+
 export function subCreditcardS2STemplate(data: {
   version: string
   MERCHANT_ID: string
@@ -38,7 +39,7 @@ export function subCreditcardS2BTemplate(data: {
   cardholderName: string
   cardholderEmail: string
   encryptedCardInfo: string
-  redirect: string
+  remark: string
   hash: string
 }) {
   const template = readFileSync(join(__dirname, './creditcard-payment-request.xml')).toString()

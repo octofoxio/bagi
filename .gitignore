@@ -4,3 +4,5 @@ node_modules
 *.js.map
 *.d.ts
 .next
+*.pem
+debug.log

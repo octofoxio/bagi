@@ -9,6 +9,6 @@
   <cardholderName>${cardholderName}</cardholderName>
   <cardholderEmail>${cardholderEmail}</cardholderEmail>
   <encCardData>${encryptedCardInfo}</encCardData>
-  <userDefined1>${redirect}</userDefined1>
+  <userDefined1>${remark}</userDefined1>
   <secureHash>${hash}</secureHash>
 </PaymentRequest>

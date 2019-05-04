@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`2C2P service testing should able to decrypt response 1`] = `
+Object {
+  "merchantId": "764764000001696",
+  "remark": "https://staging.reeeed.com",
+  "transactionId": "1556952714871",
+}
+`;
+
 exports[`2C2P service testing should able to send s2s payment 1`] = `"00acIO9SEX8hTkAK67FsWP4ZjQzM267cX2aKE+SD1E5lBYZDy+16JYAfO0l/XkuH5sIwGA87hlILgSppSWlj3yJbZ4IBb7UivIvnvf2uEhhLfdybB6zoc5Sykqnh5mQbEw9OhqfRSpR3Wak7r5HdhHunEqRIgwixfZwOLpfXa2rzr7Y=U2FsdGVkX18Vg33KYRXha5BysDTMnvK4ueL6yf+g+Olfby3RmugK6ZhMpe8uP0Iz"`;

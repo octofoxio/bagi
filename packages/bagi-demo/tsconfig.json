@@ -4,7 +4,6 @@
     "types": ["node"],
     "experimentalDecorators": true,
     "noUnusedLocals": true,
-    "allowJs": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "skipLibCheck": true,

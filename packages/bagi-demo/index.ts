@@ -15,8 +15,9 @@ function getEnvOrThrow(key: string) {
 
 function start() {
   const kernel = new HygieneKernel()
-  const redirectURL = getEnvOrThrow('BAGI_2C2P_REDIRECT_URL')
-  const bagi2C2P = new Bagi2C2PService(getEnvOrThrow('BAGI_MERCHANT_ID'), getEnvOrThrow('BAGI_MERCHANT_SECRET'))
+  const bagi2C2P = new Bagi2C2PService(getEnvOrThrow('BAGI_2C2P_MERCHANT_ID'), getEnvOrThrow('BAGI_2C2P_MERCHANT_SECRET'))
+  bagi2C2P.loadPEM(getEnvOrThrow('BAGI_2C2P_MERCHANT_PEM_PATH'))
+  bagi2C2P.setUseSandboxAPI()
   kernel.registerHTTPResolver('post', '/2c2p', async (req, res) => {
     if (req.query['method'] === 'creditcard') {
       const creditcardValidateSchema = Joi.object().keys({
@@ -43,19 +44,18 @@ function start() {
         res.status(400).send({ error: error.message })
         return
       }
-      const payload = bagi2C2P.makeCreditcardS2BPayment(
+      const result = bagi2C2P.makeCreditcardS2BPaymentPayload(
         value.cardHolderName,
         value.cardHolderEmail,
         value.description,
         value.amount,
         value.encryptedCreditcardData,
         value.uniqueTransactionCode,
-        redirectURL
+        JSON.stringify({ message: 'remark testing' })
       )
-      console.log('hi')
-      // await bagi2C2P.submitCreditcardS2SPayment(payload)
       res.json({
-        token: payload
+        token: result.message,
+        url: result.url
       })
       return
     }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { majorScale, Pane, TextInputField, Heading, Button } from 'evergreen-ui'
-import { CreditcardPayload } from '../../entities'
 import Head from 'next/head'
+import { CreditcardPayload } from '../../entities'
 
 function usePaymentService() {
   const [loading, setLoading] = React.useState<boolean>(false)
